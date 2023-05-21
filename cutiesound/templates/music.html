@@ -1,0 +1,433 @@
+<!-- music.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generate My Own Music</title>
+    <link rel="stylesheet" href="../static/css/second.css">
+        <script>
+            function handleClick(a) {
+                // Click event handler
+                // Navigate to the other web page with a hash in the URL
+                window.location.href = "a";
+            }
+        </script>
+  <link rel="shortcut icon" href="../static/img/1684693217.ico" type="image/x-icon"> 
+</head>
+
+<body>
+<div class="device-notification">
+    <a class="device-notification--logo" href="#0">
+        <img src="../static/img/logo.png" alt="Music Generator">
+        <p>CutieSound</p>
+    </a>
+    <p class="device-notification--message">CutieSound has so much to offer that we must request you orient your device to
+        portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+    <div class="container">
+        <div class="outer-nav--return"></div>
+        <div id="viewport" class="l-viewport">
+            <div class="l-wrapper">
+                <header class="header">
+                    <a class="header--logo" href="#0">
+                        <img src="../static/img/logo.png" alt="Music Generator">
+                        <p>CutieSound</p>
+                    </a>
+                    <div class="header--nav-toggle">
+                        <span></span>
+                    </div>
+                </header>
+                
+
+
+
+                        <div class="intro">
+                            <div class="intro--banner">
+
+                                <h1>Generate My Own Music</h1>
+
+                                <form action="{{ url_for('result') }}" method="POST">
+
+                                    <div class="work-request--information">
+                                        <div class="information-name">
+                                            <input id="length" name="length" type="text" spellcheck="false">
+                                            <label for="length"> Number of Bars</label>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="work-request--options">
+                                        <p>Baroque:</p>
+                                        <span class="options-a">
+                                        <input id="opt-1" name="options" type="checkbox" value="0">
+                                        <label for="opt-1">
+                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                           x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                 <path
+                                                     d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                           </g>
+                                          </svg>
+                                          Bach
+                                        </label>
+
+                                        <input id="opt-2" name="options" type="checkbox" value="1">
+                                        <label for="opt-2">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                    style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Handel
+                                        </label>
+                                            
+                                        <input id="opt-3" name="options" type="checkbox" value="2">
+                                        <label for="opt-3">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                    style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Pachelbel
+                                        </label>
+                                    </span>
+                                    <p>Classical:</p>
+                                    <span class="options-a">
+                                        <input id="opt-4" name="options" type="checkbox" value="3">
+                                        <label for="opt-4">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                    <path
+                                                        d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                </g>
+                                            </svg>
+                                            Burgmueller
+                                        </label>
+                                        <input id="opt-5" name="options" type="checkbox" value="4">
+                                        <label for="opt-5">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                    <path
+                                                        d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                </g>
+                                            </svg>
+                                            Clementi
+                                        </label>
+
+                                        <input id="opt-6" name="options" type="checkbox" value="5">
+                                        <label for="opt-6">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                    <path
+                                                        d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                </g>
+                                            </svg>
+                                            Haydn
+                                        </label>
+                                
+                                        <input id="opt-7" name="options" type="checkbox" value="6">
+                                        <label for="opt-7">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                    <path
+                                                        d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                </g>
+                                            </svg>
+                                            Beethoven
+                                        </label>
+                                        
+                                        <input id="opt-8" name="options" type="checkbox" value="7">
+                                        <label for="opt-8">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                    <path
+                                                        d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                </g>
+                                            </svg>
+                                            Brahms
+                                        </label>
+                                        
+
+
+
+                                            <input id="opt-9" name="options" type="checkbox" value="8">
+                                            <label for="opt-9">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Mozart
+                                            </label>
+                                        </span>
+                                    
+                                        <p>Romantic:</p>
+                                        <span class="options-a">
+                                            <input id="opt-10" name="options" type="checkbox" value="9">
+                                            <label for="opt-10">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Balakirew
+                                            </label>
+                                        
+                                            <input id="opt-11" name="options" type="checkbox" value="10">
+                                            <label for="opt-11">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Borodin
+                                            </label>
+                                        
+                                            <input id="opt-12" name="options" type="checkbox" value="11">
+                                            <label for="opt-12">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Brahms
+                                            </label>
+                                            <input id="opt-13" name="options" type="checkbox" value="12">
+                                            <label for="opt-13">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Chopin
+                                            </label>
+                                        
+                                            <input id="opt-14" name="options" type="checkbox" value="13">
+                                            <label for="opt-14">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Debussy
+                                            </label>
+                                        
+                                            <input id="opt-15" name="options" type="checkbox" value="14">
+                                            <label for="opt-15">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Liszt
+                                            </label>
+                                        
+                                            <input id="opt-16" name="options" type="checkbox" value="15">
+                                            <label for="opt-16">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Mendelssohn
+                                            </label>
+                                        
+
+
+                                        </span>
+                                        
+                                        <span class="options-a">
+                                            <input id="opt-17" name="options" type="checkbox" value="16">
+                                            <label for="opt-17">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Moszkowski
+                                            </label>
+                                        
+                                            <input id="opt-18" name="options" type="checkbox" value="17">
+                                            <label for="opt-18">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Mussorgsky
+                                            </label>
+                                        
+                                            <input id="opt-19" name="options" type="checkbox" value="18">
+                                            <label for="opt-19">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Rachmaninov
+                                            </label>
+                                        
+                                            <input id="opt-20" name="options" type="checkbox" value="19">
+                                            <label for="opt-20">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Schubert
+                                            </label>
+                                            <input id="opt-21" name="options" type="checkbox" value="20">
+                                            <label for="opt-21">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Schumann
+                                            </label>
+                                        
+                                            <input id="opt-22" name="options" type="checkbox" value="21">
+                                            <label for="opt-22">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Tchaikovsky
+                                            </label>
+                                        
+                                            <input id="opt-23" name="options" type="checkbox" value="22">
+                                            <label for="opt-23">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    x="0px" y="0px" viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                        <path
+                                                            d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                                                    </g>
+                                                </svg>
+                                                Tschai
+                                            </label>
+                                        
+                                            
+                                        
+                                        </span>
+                                    
+                                    </div>
+                                    
+
+                                    <button type="submit" onclick="location.href='result'" onclick="generateMusic(event)" >Generate
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                                <path
+                                                    d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                                            </g>
+                                        </svg>
+                                        <span class="btn-background"></span>
+                                    </button>
+                                </form>
+                                
+                            </div>
+
+                        </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+<ul class="outer-nav">
+    <li onclick="location.href='/'">Home</li>
+    <li class="is-active" onclick="location.href='music'">Generate</li>
+</ul>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../static/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="../static/js/functions-min.js"></script>
+
+
+<script>
+    function generateMusic(event) {
+        event.preventDefault(); // 阻止表单默认提交行为
+
+        // 获取文本输入框和复选框的值
+        var barNumber = document.getElementById('length').value;
+        var styles = [];
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        for (var i = 0; i < checkboxes.length; i++) {
+            styles.push(checkboxes[i].value);
+        }
+
+        // 发送数据到后端
+        fetch('/generate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                barNumber: barNumber,
+                styles: styles
+            })
+        }).then(function (response) {
+            if (response.ok) {
+                // 跳转到result.html页面
+                window.location.href = 'result';
+            } else {
+                console.log('Error:', response.statusText);
+            }
+        }).catch(function (error) {
+            console.log('Error:', error);
+        });
+    }
+</script>
+
+</body>
+
+</html>

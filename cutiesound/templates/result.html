@@ -1,0 +1,197 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generate Result</title>
+    <link rel="stylesheet" href="../static/css/second.css">
+    <link rel="shortcut icon" href="../static/img/1684693217.ico" type="image/x-icon"> 
+    <style>
+        .containerresult {
+            display: flex;
+        }
+
+        .columnresult1 {
+        flex-basis: 30%; /* 第一栏占据70%的宽度 */
+        margin-right: 10px; /* 可选，用于设置两栏之间的间距 */
+    }
+
+        .columnresult2 {
+        flex-basis: 70%;
+        flex-direction: column;
+        justify-content: center; /* 将内容垂直居中 */
+        align-items: center;/* 第二栏占据30%的宽度 */
+    }
+.container-btn {
+  display: flex;
+  justify-content: flex-end; /* 将内容向右对齐 */
+}
+
+.right-btn {
+  margin-left: 5px; /* 可根据需要调整按钮之间的间距 */
+}
+
+
+
+    </style>
+</head>
+
+
+<body>
+<div class="device-notification">
+    <a class="device-notification--logo" href="#0">
+        <img src="../static/img/logo.png" alt="Music Generator">
+        <p>CutieSound</p>
+    </a>
+    <p class="device-notification--message">CutieSound has so much to offer that we must request you orient your device to
+        portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+
+<div class="perspective effect-rotate-left">
+        <div class="container">
+            <div class="outer-nav--return"></div>
+            <div id="viewport" class="l-viewport">
+                <div class="l-wrapper">
+                    <header class="header">
+                        <a class="header--logo" href="#0">
+                            <img src="../static/img/logo.png" alt="Music Generator">
+                            <p>CutieSound</p>
+                        </a>
+                        <div class="header--nav-toggle">
+                            <span></span>
+                        </div>
+                    </header>
+
+                    <ul class="l-main-content main-content">
+                        <li class="l-section section section--is-active">
+                            <div class="intro">
+                                <div class="intro--banner">
+                                    
+                                    <div class="containerresult">
+                                        <div class="columnresult1">
+                                            <h1>{{ generation_status }}</h1>
+                                            <h2>Number of Bars: </h2>
+                                            <p> &nbsp;&nbsp;&nbsp;{{ a }} </p>
+                                            <h2>Selected Options:</h2>
+                                            <ul>
+                                                 {% for label in selected_labels %}
+                                                  <li>{{ label }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                                                                                    
+                                        </div>
+
+                                    
+                                        <div class="columnresult2">
+                                        <br>
+                                        <br>
+                        
+                                        <div class="container-btn">
+
+                                        <button type="download"    id="downloadButton" class="right-btn">Download
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                            y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                                <path
+                                                    d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                                            </g>
+                                            </svg>
+                                             <span class="btn-background"></span>
+                                        </button>
+                                   
+                                        <button type="new" onclick="location.href='music'" class="right-btn">New
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                                <path
+                                                    d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                                            </g>
+                                         </svg>
+                                            <span class="btn-background"></span>
+                                         </button>
+                                        
+                                        </div>
+                                        <br>
+                                        <br>                                                                                               <section id="section3">
+                                              
+                                                <midi-player id="midi-player" sound-font
+                                                    visualizer="#section3 midi-visualizer">
+                                                </midi-player>
+                                                <midi-visualizer id="midi-visualizer">
+                                                </midi-visualizer>
+                                            </section>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="outer-nav">
+            <li onclick="location.href='/'">Home</li>
+            <li class="is-active" onclick="location.href='music'">Generate</li>
+        </ul>
+
+</div>    
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="../static/js/functions-min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+
+    <script>
+        staff.Config = {
+                noteRGB: rgb(192, 192, 192),
+                activeNoteRGB: rgb(255, 244, 152)
+            };
+    </script>
+
+    <script>
+        // 假设下载地址存储在一个变量中
+        let downloadUrl = "{{ result_data }}";
+
+        // 获取下载按钮的引用
+        const downloadButton = document.getElementById('downloadButton');
+
+        // 给按钮绑定点击事件处理函数
+        downloadButton.addEventListener('click', function () {
+            // 创建一个新的链接元素
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = 'output.mid';  // 设置下载的文件名
+
+            // 将链接元素添加到页面中
+            document.body.appendChild(link);
+
+            // 触发点击事件
+            link.click();
+
+            // 移除链接元素
+            document.body.removeChild(link);
+        });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var midiPlayer = document.getElementById("midi-player");
+        var midiVisualizer = document.getElementById("midi-visualizer");
+
+        var resultData = "{{ result_data }}";  // 使用模板语法获取result_data变量
+
+        if (resultData) {
+            midiPlayer.setAttribute("src", resultData);
+            midiVisualizer.setAttribute("src", resultData);
+        }
+    });
+    </script>
+</body>
+
+</html>
