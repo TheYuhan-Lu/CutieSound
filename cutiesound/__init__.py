@@ -97,7 +97,7 @@ def get_random_midi_url(directory,a):
         midi_files = ['128-1.mid', '128-2.mid', '128-3.mid','128-4.mid', '128-5.mid', '128-6.mid']
     
     random_file = random.choice(midi_files)
-    return f'https://github.com/{directory}/{random_file}'
+    return f'https://cdn.jsdelivr.net/gh/TheYuhan-Lu/CutieSound@first/cutiesound/{directory}/{random_file}'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
