@@ -70,7 +70,7 @@
                                     
                                     <div class="containerresult">
                                         <div class="columnresult1">
-                                            <h1>{{ generation_status }}</h1>
+                                             <h1 id="status">Generating</h1>
                                             <h2>Number of Bars: </h2>
                                             <p> &nbsp;&nbsp;&nbsp;{{ a }} </p>
                                             <h2>Selected Options:</h2>
@@ -179,19 +179,12 @@
         });
     </script>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var midiPlayer = document.getElementById("midi-player");
-        var midiVisualizer = document.getElementById("midi-visualizer");
-
-        var resultData = "{{ result_data }}";  // 使用模板语法获取result_data变量
-
-        if (resultData) {
-            midiPlayer.setAttribute("src", resultData);
-            midiVisualizer.setAttribute("src", resultData);
-        }
+  <script>
+    // 页面加载完成后，将状态改为"Result"
+    window.addEventListener('load', function() {
+      document.getElementById('status').textContent = 'Result';
     });
-    </script>
+  </script>
 </body>
 
 </html>
