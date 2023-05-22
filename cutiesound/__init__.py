@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 import random
 import time
-import threading
+
 
 app = Flask(__name__,static_folder="static")
+# 设置日志级别为调试级别
 
 
 @app.route('/')
@@ -48,30 +49,25 @@ def result():
     }
     selected_labels = [options_labels[option] for option in selected_options]
     
-    
-    
-    return render_template('result.html', a=a, selected_labels=selected_labels)
-
-def get_midi_url(length):
-    
-    time.sleep(5)  # 添加延时，单位为秒
-    if length == 64:
+    if a == '64':
         folder = '64'
         midi_files = ['64-1.mid', '64-2.mid', '64-3.mid']
-    elif length == 128:
+    elif a == '128':
         folder = '128'
         midi_files = ['128-1.mid', '128-2.mid', '128-3.mid','128-4.mid', '128-5.mid', '128-6.mid']
     else:
         raise ValueError('Invalid length.')
-
-    # 在特定目录下随机选择一个.mid文件
-    # 这里使用了示例的链接，你可以根据需要修改
+    
     base_url = 'https://cdn.jsdelivr.net/gh/TheYuhan-Lu/CutieSound@1.0/cutiesound/out'
      # 这里需要替换为实际的文件列表
     random_file = random.choice(midi_files)
+
     midi_url = f'{base_url}/{folder}/{random_file}'
+    time.sleep(0) 
     
-    return midi_url
+    return render_template('result.html',a=a, selected_labels=selected_labels,midi_url=midi_url)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')

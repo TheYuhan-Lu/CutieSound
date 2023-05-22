@@ -6,34 +6,22 @@
     <title>Generate Result</title>
     <link rel="stylesheet" href="../static/css/second.css">
     <link rel="shortcut icon" href="../static/img/1684693217.ico" type="image/x-icon"> 
-    <style>
-        .containerresult {
-            display: flex;
-        }
-
-        .columnresult1 {
-        flex-basis: 30%; /* 第一栏占据70%的宽度 */
-        margin-right: 10px; /* 可选，用于设置两栏之间的间距 */
-    }
-
-        .columnresult2 {
-        flex-basis: 70%;
-        flex-direction: column;
-        justify-content: center; /* 将内容垂直居中 */
-        align-items: center;/* 第二栏占据30%的宽度 */
-    }
-.container-btn {
+<style>
+    .pacontainer1{
   display: flex;
-  justify-content: flex-end; /* 将内容向右对齐 */
+  justify-content: space-between;
 }
 
-.right-btn {
-  margin-left: 5px; /* 可根据需要调整按钮之间的间距 */
+.pacontainer2 {
+  flex-basis: calc(33.33% - 10px); /* 每栏宽度为三分之一减去间距 */
+  margin-right: 10px; /* 栏之间的间距 */
 }
 
-
-
-    </style>
+.pacontainer2:last-child {
+  margin-right: 0; /* 最后一栏没有右间距 */
+  align-self: flex-end; 
+}
+</style>
 </head>
 
 
@@ -67,62 +55,67 @@
                         <li class="l-section section section--is-active">
                             <div class="intro">
                                 <div class="intro--banner">
-                                    
-                                    <div class="containerresult">
-                                        <div class="columnresult1">
-                                             <h1 id="status">Generating</h1>
+                                     <h1 id="status">Generating</h1>
+                                    <div class="pacontainer1">
+                                        
+                                        <div class="pacontainer2">
+                                            
                                             <h2>Number of Bars: </h2>
                                             <p> &nbsp;&nbsp;&nbsp;{{ a }} </p>
+                                                             </div>                    
+                                
+                       <div class="pacontainer2"> 
                                             <h2>Selected Options:</h2>
                                             <ul>
                                                  {% for label in selected_labels %}
                                                   <li>{{ label }}</li>
                                                 {% endfor %}
                                             </ul>
-                                                                                                    
-                                        </div>
-
-                                    
-                                        <div class="columnresult2">
-                                        <br>
-                                        <br>
-                        
-                                        <div class="container-btn">
-
-                                        <button type="download"    id="downloadButton" class="right-btn">Download
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                                                <path
+                                                                                                                 </div>                    
+                                
+                       <div class="pacontainer2 align-bottom"> 
+                                            
+<br>
+<br>
+                                                <button type="download"    id="downloadButton" class="right-btn">Download
+                                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                    y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                                    <path
                                                     d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                                            </g>
-                                            </svg>
-                                             <span class="btn-background"></span>
-                                        </button>
+                                                    </g>
+                                                 </svg>
+                                                 <span class="btn-background"></span>
+                                                </button>
                                    
-                                        <button type="new" onclick="location.href='music'" class="right-btn">New
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                                                <path
+                                                <button type="new" onclick="location.href='music'" class="right-btn">New
+                                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                                    <path
                                                     d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                                            </g>
-                                         </svg>
-                                            <span class="btn-background"></span>
-                                         </button>
+                                                    </g>
+                                                    </svg>
+                                                      <span class="btn-background"></span>
+                                                 </button>
                                         
-                                        </div>
-                                        <br>
-                                        <br>                                                                                               <section id="section3">
+                                            
+                                                                                                                                           
+
+                                        
+                                    
+                                      </div>   
+                                                </div>
+
+                                                <br>
+                                                <br>
+                                            <section id="section3">
                                               
-                                                <midi-player id="midi-player" sound-font
+                                                <midi-player src="{{ midi_url }}" id="midi-player" sound-font
                                                     visualizer="#section3 midi-visualizer">
                                                 </midi-player>
-                                                <midi-visualizer id="midi-visualizer">
+                                                <midi-visualizer src="{{ midi_url }}" id="midi-visualizer">
                                                 </midi-visualizer>
                                             </section>
-                                        </div>
-                                    </div>
-
 
                                 </div>
                             </div>
@@ -155,29 +148,53 @@
     </script>
 
     <script>
-        // 假设下载地址存储在一个变量中
-        let downloadUrl = "{{ result_data }}";
+    // 假设下载地址存储在一个变量中
+    let downloadUrl = "{{ midi_url }}";
 
-        // 获取下载按钮的引用
-        const downloadButton = document.getElementById('downloadButton');
+    // 获取下载按钮的引用
+    const downloadButton = document.getElementById('downloadButton');
 
-        // 给按钮绑定点击事件处理函数
-        downloadButton.addEventListener('click', function () {
-            // 创建一个新的链接元素
-            const link = document.createElement('a');
-            link.href = downloadUrl;
-            link.download = 'output.mid';  // 设置下载的文件名
+    // 给按钮绑定点击事件处理函数
+    downloadButton.addEventListener('click', function () {
+        // 创建一个新的 XMLHttpRequest 对象
+        const xhr = new XMLHttpRequest();
 
-            // 将链接元素添加到页面中
-            document.body.appendChild(link);
+        // 发送 GET 请求获取 MIDI 文件的内容
+        xhr.open('GET', downloadUrl, true);
+        xhr.responseType = 'blob';
 
-            // 触发点击事件
-            link.click();
+        // 请求完成后的处理函数
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                // 创建一个 Blob 对象
+                const blob = new Blob([xhr.response], { type: 'audio/midi' });
 
-            // 移除链接元素
-            document.body.removeChild(link);
-        });
-    </script>
+                // 生成临时 URL
+                const url = URL.createObjectURL(blob);
+
+                // 创建一个新的链接元素
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'output.mid';  // 设置下载的文件名
+
+                // 将链接元素添加到页面中
+                document.body.appendChild(link);
+
+                // 触发点击事件
+                link.click();
+
+                // 移除链接元素
+                document.body.removeChild(link);
+
+                // 释放临时 URL
+                URL.revokeObjectURL(url);
+            }
+        };
+
+        // 发送请求
+        xhr.send();
+    });
+</script>
 
   <script>
     // 页面加载完成后，将状态改为"Result"
